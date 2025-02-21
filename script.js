@@ -46,6 +46,7 @@ const showInvite = (userData) => {
         </div>
     `
 };
+
 const saveUser = (userData) => {
     const newUser = {
         ...userData,
@@ -75,7 +76,16 @@ const formAction = () => {
             showInvite(newUser);
         };
      }
-}
+};
+
+const updateImageLinks = () => {
+    document.querySelectorAll('img').forEach((img) => {
+      const src = img.getAttribute("src"); 
+      if (src && !src.startsWith("http")) {  
+        img.src = `https://raw.githubusercontent.com/maykbrito/my-public-files/main/nlw-19/${src}`;
+      }
+    });
+};
 
 const startApp = () => {
     const content = `
@@ -89,12 +99,12 @@ const startApp = () => {
     `;
 
     app.innerHTML = content;
-
+    updateImageLinks();
     formAction();
- }
+};
 
-startApp();
+//startApp();
 
 document.getElementById('logo').onclick = () => {
     startApp();
-}
+};

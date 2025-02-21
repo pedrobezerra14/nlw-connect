@@ -1,14 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root, input, button {
     font-family: "Montserrat";
 }
 
-body{
+body {
     background: url("https://raw.githubusercontent.com/maykbrito/my-public-files/main/nlw-19/bg.jpg")no-repeat center/cover;
     min-height: 100vh;
+    color: #E1E1E6;
+    display: grid;
+    place-items: center;
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Oxanium';
+    font-size: 2.5rem;
+    line-height: 100%;
+    color: #DAE4F2;
+}
+
+h1 div {
+    color: #6F9DE2;
 }
